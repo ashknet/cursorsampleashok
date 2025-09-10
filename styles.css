@@ -1,20 +1,45 @@
 :root {
-  /* Brand palette per request */
-  --brand: #4d8c2d;
-  --brand-2: #a64270;
-  --accent: #6ba3d4;
-  --ink: #535e69;
-  --ink-deep: #1a354a;
-
-  /* Derived UI tokens */
-  --bg: #0e1419;
-  --bg-elev: #101820;
-  --panel: #111c25;
-  --surface: #12202b;
   --text: #e8eef5;
   --muted: #a0acb8;
   --border: rgba(26,53,74,.35);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Themes built from the same 5 colors layered differently */
+.theme-forest {
+  --brand: #4d8c2d; /* primary */
+  --brand-2: #a64270; /* contrast */
+  --accent: #6ba3d4; /* accent */
+  --ink: #535e69;
+  --ink-deep: #1a354a;
+  --bg: #0f1a13;
+  --bg-elev: #102118;
+  --panel: #11281c;
+  --surface: #0f2b19;
+}
+
+.theme-rose {
+  --brand: #a64270;
+  --brand-2: #6ba3d4;
+  --accent: #4d8c2d;
+  --ink: #1a354a;
+  --ink-deep: #535e69;
+  --bg: #1a1015;
+  --bg-elev: #20141b;
+  --panel: #271822;
+  --surface: #2d1b27;
+}
+
+.theme-ocean {
+  --brand: #6ba3d4;
+  --brand-2: #4d8c2d;
+  --accent: #a64270;
+  --ink: #535e69;
+  --ink-deep: #1a354a;
+  --bg: #0b141c;
+  --bg-elev: #0e1922;
+  --panel: #0f1f2b;
+  --surface: #102636;
 }
 
 /* Optional light theme removed to adhere to fixed palette */
@@ -45,6 +70,9 @@ body {
 .brand-title { font-weight: 700; letter-spacing: .3px; }
 
 .header-actions { display: flex; align-items: center; gap: 10px; }
+.theme-switch { display:flex; gap:6px; }
+.switch-btn { width:34px; height:34px; border-radius:8px; border:1px solid var(--border); background: var(--panel); color: var(--text); cursor:pointer; }
+.switch-btn.is-active { background: linear-gradient(90deg, var(--brand), var(--brand-2)); color:#fff; border-color: transparent; }
 .search-input {
   appearance: none;
   border: 1px solid var(--border);

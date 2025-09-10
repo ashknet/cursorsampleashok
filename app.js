@@ -5,21 +5,35 @@
   // ---------- Data loading ----------
   // Embedded sample data to avoid external file references
   const SAMPLE = (function () {
+    // KPI sample mirrors your structure with real Oncology items
     const kpis = { SubFolders: [{ Name: 'KPIs', SubFolders: [
-      { Name: 'Executive', Reports: [{ Name: 'Coming Soon', URL: 'https://example.com' }] },
-      { Name: 'Oncology and Women\'s Services', Reports: [
+      { Name: 'ED', Reports: [] },
+      { Name: 'Executive', Reports: [{ Name: 'Coming Soon 2', URL: 'https://ashoktest.com/Reports/report/KPIs/Executive/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' }] },
+      { Name: "Oncology and Women's Services", Reports: [
+        { Name: 'Oncology_Consults', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_Consults?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' },
         { Name: 'Oncology_Finance', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_Finance?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' },
-        { Name: 'Oncology_PatientCount', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_PatientCount?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' }
-      ] }
+        { Name: 'Oncology_PatientCount', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_PatientCount?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' },
+        { Name: 'Oncology_RVU', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_RVU?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' },
+        { Name: 'Oncology_Visit', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_Visit?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' }
+      ] },
+      { Name: 'Quality', Reports: [{ Name: 'Coming Soon 2', URL: 'https://ashoktest.com/Reports/report/KPIs/Quality/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' }] },
+      { Name: 'SEP Quality', Reports: [{ Name: 'Coming Soon 2', URL: 'https://ashoktest.com/Reports/report/KPIs/SEP Quality/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' }] }
     ] }] };
 
     const dashboards = { SubFolders: [{ Name: 'Dashboards', SubFolders: [
       { Name: 'Finance', Reports: [
         { Name: 'SEP Daily Flash Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEP Daily Flash Dashboard?&rs:embed=true' },
-        { Name: 'SEH Daily Flash Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEH Daily Flash Dashboard?&rs:embed=true' }
+        { Name: 'SEH Daily Flash Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEH Daily Flash Dashboard?&rs:embed=true' },
+        { Name: 'SEP Income Statement Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEP Income Statement Dashboard?&rs:embed=true' }
       ] },
-      { Name: 'Oncology and Women\'s Services', Reports: [
-        { Name: 'Oncology Aria', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women\'s Services/Oncology Aria?&rs:embed=true' }
+      { Name: "Oncology and Women's Services", SubFolders: [
+        { Name: 'Level 2', Reports: [
+          { Name: 'Finance Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women\'s Services/Level 2/Finance Dashboard?&rs:embed=true' },
+          { Name: 'Finance Dashboard - MedOnc', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women\'s Services/Level 2/Finance Dashboard - MedOnc?&rs:embed=true' }
+        ] }
+      ], Reports: [
+        { Name: 'Oncology Aria', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women\'s Services/Oncology Aria?&rs:embed=true' },
+        { Name: 'Oncology Consults Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women\'s Services/Oncology Consults Dashboard?&rs:embed=true' }
       ] }
     ] }] };
 
@@ -29,7 +43,8 @@
         { Name: 'OB Coverages', URL: 'https://ashoktest.com/Reports/report/Reports/ADT/OB Coverages?&rs:embed=true' }
       ] },
       { Name: 'Appointments', Reports: [
-        { Name: 'Appt Stats', URL: 'https://ashoktest.com/Reports/report/Reports/Appointments/Appt Stats?&rs:embed=true' }
+        { Name: 'Appt Stats', URL: 'https://ashoktest.com/Reports/report/Reports/Appointments/Appt Stats?&rs:embed=true' },
+        { Name: 'Appointments Available', URL: 'https://ashoktest.com/Reports/report/Reports/Appointments/Appointments Available?&rs:embed=true' }
       ] }
     ] }] };
 
@@ -277,12 +292,18 @@
 
   // ---------- Theme ----------
   function attachThemeToggle() {
-    const key = 'ihub_theme';
-    const saved = localStorage.getItem(key);
-    if (saved === 'light') document.body.classList.add('light');
-    $('#theme-toggle').on('click', function () {
-      document.body.classList.toggle('light');
-      localStorage.setItem(key, document.body.classList.contains('light') ? 'light' : 'dark');
+    const key = 'ihub_theme_v2';
+    const saved = localStorage.getItem(key) || 'theme-forest';
+    document.body.classList.add(saved);
+    $('.switch-btn').removeClass('is-active').attr('aria-pressed','false');
+    $(`.switch-btn[data-theme="${saved}"]`).addClass('is-active').attr('aria-pressed','true');
+    $('.switch-btn').on('click', function () {
+      const t = $(this).data('theme');
+      ['theme-forest','theme-rose','theme-ocean'].forEach(cls => document.body.classList.remove(cls));
+      document.body.classList.add(t);
+      localStorage.setItem(key, t);
+      $('.switch-btn').removeClass('is-active').attr('aria-pressed','false');
+      $(this).addClass('is-active').attr('aria-pressed','true');
     });
   }
 

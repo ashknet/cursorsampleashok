@@ -17,9 +17,11 @@
     </div>
     <div class="header-actions">
       <input id="global-search" class="search-input" type="search" placeholder="Search reports…" aria-label="Search reports" />
-      <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0 0 18c4.97 0 9-4.03 9-9 0-3.53-2.05-6.58-5.02-8.04A7 7 0 0 1 12 20a7 7 0 0 1 0-14z"/></svg>
-      </button>
+      <div class="theme-switch" role="radiogroup" aria-label="Theme">
+        <button class="switch-btn is-active" data-theme="theme-forest" aria-pressed="true" title="Forest">F</button>
+        <button class="switch-btn" data-theme="theme-rose" aria-pressed="false" title="Rose">R</button>
+        <button class="switch-btn" data-theme="theme-ocean" aria-pressed="false" title="Ocean">O</button>
+      </div>
     </div>
   </header>
 
