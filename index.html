@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Insights Hub</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+      <span class="brand-title">Insights Hub</span>
+    </div>
+    <div class="header-actions">
+      <input id="global-search" class="search-input" type="search" placeholder="Search reports…" aria-label="Search reports" />
+      <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0 0 18c4.97 0 9-4.03 9-9 0-3.53-2.05-6.58-5.02-8.04A7 7 0 0 1 12 20a7 7 0 0 1 0-14z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="primary-nav" role="tablist" aria-label="Primary">
+    <button class="nav-pill is-active" data-section="kpis" role="tab" aria-selected="true">KPIs</button>
+    <button class="nav-pill" data-section="dashboards" role="tab" aria-selected="false">Dashboards</button>
+    <button class="nav-pill" data-section="reports" role="tab" aria-selected="false">Reports</button>
+  </nav>
+
+  <section class="category-bar">
+    <div id="category-scroller" class="category-scroller" aria-label="Categories"></div>
+  </section>
+
+  <main class="layout">
+    <aside class="context-panel" aria-live="polite">
+      <div class="context-block">
+        <div class="context-title">Context</div>
+        <div id="context-info" class="context-body">Select a category to get started.</div>
+      </div>
+      <div class="context-block">
+        <div class="context-title">Breadcrumb</div>
+        <nav id="breadcrumb" class="breadcrumb"></nav>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="content-toolbar" class="content-toolbar">
+        <div id="section-title" class="section-title">KPIs</div>
+        <div id="local-actions" class="local-actions"></div>
+      </div>
+
+      <div id="panel-kpis" class="panel is-visible" data-panel="kpis">
+        <div id="kpi-tabs" class="tabbar" role="tablist"></div>
+        <div id="kpi-viewer" class="viewer"></div>
+      </div>
+
+      <div id="panel-dashboards" class="panel" data-panel="dashboards">
+        <div id="dash-grid" class="card-grid"></div>
+        <div id="dash-detail" class="hidden">
+          <div class="subheader"><button id="dash-back" class="text-btn">← Back</button><span id="dash-detail-title"></span></div>
+          <div id="dash-detail-grid" class="card-grid"></div>
+        </div>
+        <div id="dash-viewer" class="viewer"></div>
+      </div>
+
+      <div id="panel-reports" class="panel" data-panel="reports">
+        <div class="explorer-toolbar">
+          <input id="reports-search" class="search-input" type="search" placeholder="Search in Reports" aria-label="Search in Reports" />
+        </div>
+        <div id="reports-grid" class="explorer-grid"></div>
+        <div id="reports-viewer" class="viewer"></div>
+      </div>
+    </section>
+  </main>
+
+  <template id="tmpl-folder-card">
+    <div class="card card-folder">
+      <div class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M10 4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6z"/></svg>
+      </div>
+      <div class="card-body">
+        <div class="card-title"></div>
+        <div class="card-meta"></div>
+      </div>
+      <div class="card-actions">
+        <button class="text-btn view-btn">View</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="tmpl-report-card">
+    <div class="card card-report">
+      <div class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m9 7h5l-5-5v5z"/></svg>
+      </div>
+      <div class="card-body">
+        <div class="card-title"></div>
+        <div class="card-meta"></div>
+      </div>
+      <div class="card-actions">
+        <button class="text-btn open-btn">Open</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>
