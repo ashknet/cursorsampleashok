@@ -129,6 +129,7 @@ body {
 .card-icon svg { width: 28px; height: 28px; color: var(--brand); }
 .card-title { font-weight: 600; }
 .card-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.muted { color: var(--muted); }
 
 .text-btn { background: transparent; border: 0; color: var(--brand); padding: 6px 10px; cursor: pointer; }
 

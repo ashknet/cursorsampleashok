@@ -308,20 +308,22 @@ function enableLocalLoader() {
   $('#close-overlay').on('click', () => toggleOverlay(false));
 
   function handleFiles(files) {
-    const map = {};
-    Array.from(files).forEach(f => { map[f.name.toLowerCase()] = f; });
-    const needed = ['kpi.json', 'dashboard.json', 'report.json'];
-    const missing = needed.filter(n => !map[n]);
-    if (missing.length) {
-      status.text('Missing: ' + missing.join(', '));
-      return;
-    }
+    const list = Array.from(files);
+    const pick = (kw) => list.find(f => f.name.toLowerCase().includes(kw));
+    const kFile = pick('kpi');
+    const dFile = pick('dashboard');
+    const rFile = pick('report');
+    const missing = [];
+    if (!kFile) missing.push('kpi.json');
+    if (!dFile) missing.push('dashboard.json');
+    if (!rFile) missing.push('report.json');
+    if (missing.length) { status.text('Missing: ' + missing.join(', ')); return; }
     status.text('Loading…');
-    const readers = needed.map(name => readFileAsJson(map[name]));
-    Promise.all(readers).then(([k,d,r]) => {
-      overlay.addClass('hidden').attr('aria-hidden','true');
+    Promise.all([readFileAsJson(kFile), readFileAsJson(dFile), readFileAsJson(rFile)]).then(([k,d,r]) => {
       if (window.IHub && typeof window.IHub.loadLocal === 'function') {
         window.IHub.loadLocal({ kpis: k, dashboards: d, reports: r });
+        status.text('Loaded ✓');
+        toggleOverlay(false);
       }
     }).catch(err => {
       console.error(err);
