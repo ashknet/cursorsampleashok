@@ -1,0 +1,448 @@
+{
+  "Id": null,
+  "Name": null,
+  "Path": "/Folders?$filter=Path%20eq%20%27%2FDashboards%27",
+  "ParentFolderId": null,
+  "Description": null,
+  "URL": null,
+  "FolderURL": null,
+  "Type": null,
+  "Hidden": false,
+  "SubFolders": [
+    {
+      "Id": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+      "Name": "Dashboards",
+      "Path": "/Dashboards",
+      "ParentFolderId": "6e0dbda3-3cfe-43bf-9629-db4a1619f01f",
+      "Description": null,
+      "URL": "https://ashoktest.com/Reports//Dashboards?&rs:embed=true",
+      "FolderURL": null,
+      "Type": "Folder",
+      "Hidden": false,
+      "SubFolders": [
+        {
+          "Id": "4480c5fc-0008-4928-8908-e4c153aafced",
+          "Name": "ED",
+          "Path": "/Dashboards/ED",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/ED?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "acd7a9cd-b8fd-4456-a009-59296cb29596",
+              "Name": "ED Dashboard",
+              "Path": "/Dashboards/ED/ED Dashboard",
+              "ParentFolderId": "4480c5fc-0008-4928-8908-e4c153aafced",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/ED/ED Dashboard?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "c6b87b9b-97e8-4536-87c6-89cb9716bff4",
+          "Name": "Finance",
+          "Path": "/Dashboards/Finance",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Finance?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "50d0a450-bb6e-441e-9530-685253269fbf",
+              "Name": "Payor Analysis (XLSX)",
+              "Path": "/Dashboards/Finance/Payor Analysis (XLSX)",
+              "ParentFolderId": "c6b87b9b-97e8-4536-87c6-89cb9716bff4",
+              "Description": "Excel worksheet",
+              "URL": "https://ashoktest.com/Reports/report/Dashboards/Finance/Payor Analysis (XLSX)?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Report",
+              "Hidden": false
+            },
+            {
+              "Id": "e081bbd7-2f6d-4994-9a29-d7bd451928ae",
+              "Name": "Payor Analysis",
+              "Path": "/Dashboards/Finance/Payor Analysis",
+              "ParentFolderId": "c6b87b9b-97e8-4536-87c6-89cb9716bff4",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Finance/Payor Analysis?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "16d82c25-c85f-4a3c-931e-9315490ee516",
+              "Name": "SEH Daily Flash Dashboard",
+              "Path": "/Dashboards/Finance/SEH Daily Flash Dashboard",
+              "ParentFolderId": "c6b87b9b-97e8-4536-87c6-89cb9716bff4",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEH Daily Flash Dashboard?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "a6b6ce78-0836-4a37-8988-4f654b6085f6",
+              "Name": "SEP Daily Flash Dashboard",
+              "Path": "/Dashboards/Finance/SEP Daily Flash Dashboard",
+              "ParentFolderId": "c6b87b9b-97e8-4536-87c6-89cb9716bff4",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEP Daily Flash Dashboard?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "fa25949f-df6f-4552-99ad-160cc329a505",
+              "Name": "SEP Income Statement Dashboard",
+              "Path": "/Dashboards/Finance/SEP Income Statement Dashboard",
+              "ParentFolderId": "c6b87b9b-97e8-4536-87c6-89cb9716bff4",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEP Income Statement Dashboard?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "420a9056-7937-46c5-b2de-0b1358b8a7da",
+          "Name": "HVI",
+          "Path": "/Dashboards/HVI",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/HVI?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": []
+        },
+        {
+          "Id": "ad9ae5a9-871d-4da2-aa90-0046bd8118d7",
+          "Name": "Information System",
+          "Path": "/Dashboards/Information System",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Information System?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "f9aa898a-21bc-45ed-ad2e-6344a65ec51f",
+              "Name": "PBI Adoption",
+              "Path": "/Dashboards/Information System/PBI Adoption",
+              "ParentFolderId": "ad9ae5a9-871d-4da2-aa90-0046bd8118d7",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Information System/PBI Adoption?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "d44464e3-e4b9-4059-a94a-c9fcb598b903",
+          "Name": "Lab",
+          "Path": "/Dashboards/Lab",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Lab?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "9b4e6398-09c1-46eb-b070-bde152b089ab",
+              "Name": "Microbiology",
+              "Path": "/Dashboards/Lab/Microbiology",
+              "ParentFolderId": "d44464e3-e4b9-4059-a94a-c9fcb598b903",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Lab/Microbiology?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "5c388dd9-4013-44e7-8693-d642da03ed89",
+          "Name": "Nursing",
+          "Path": "/Dashboards/Nursing",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Nursing?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "044ce21f-a45a-4df9-adb0-6319b64309d3",
+              "Name": "LOS Sustainability",
+              "Path": "/Dashboards/Nursing/LOS Sustainability",
+              "ParentFolderId": "5c388dd9-4013-44e7-8693-d642da03ed89",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Nursing/LOS Sustainability?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "87a39f5e-aafc-4396-aa1d-ca74ecda142f",
+              "Name": "Midas LOS",
+              "Path": "/Dashboards/Nursing/Midas LOS",
+              "ParentFolderId": "5c388dd9-4013-44e7-8693-d642da03ed89",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Nursing/Midas LOS?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "464d8049-1593-4ce3-96f3-108e0879bf43",
+              "Name": "Operational Metrics – Overview",
+              "Path": "/Dashboards/Nursing/Operational Metrics – Overview",
+              "ParentFolderId": "5c388dd9-4013-44e7-8693-d642da03ed89",
+              "Description": "Mike Report",
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Nursing/Operational Metrics – Overview?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "e8aa721c-2b1e-440d-9432-e237235ba843",
+              "Name": "Operational Metrics - Self Service",
+              "Path": "/Dashboards/Nursing/Operational Metrics - Self Service",
+              "ParentFolderId": "5c388dd9-4013-44e7-8693-d642da03ed89",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Nursing/Operational Metrics - Self Service?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "770fd4ad-4096-46b6-81b2-50c8fffdf463",
+          "Name": "Oncology and Women's Services",
+          "Path": "/Dashboards/Oncology and Women's Services",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Oncology and Women's Services?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "c8416c72-30e7-4cfd-bbd2-7823811699c8",
+              "Name": "Level 1",
+              "Path": "/Dashboards/Oncology and Women's Services/Level 1",
+              "ParentFolderId": "770fd4ad-4096-46b6-81b2-50c8fffdf463",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//Dashboards/Oncology and Women's Services/Level 1?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": []
+            },
+            {
+              "Id": "1747e58e-7c61-4b40-a71f-c3b823c6b0fc",
+              "Name": "Level 2",
+              "Path": "/Dashboards/Oncology and Women's Services/Level 2",
+              "ParentFolderId": "770fd4ad-4096-46b6-81b2-50c8fffdf463",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//Dashboards/Oncology and Women's Services/Level 2?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "21b87dcd-7a79-4004-bc53-2ea7e35fb8c0",
+                  "Name": "Finance Dashboard",
+                  "Path": "/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard",
+                  "ParentFolderId": "1747e58e-7c61-4b40-a71f-c3b823c6b0fc",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard?&rs:embed=true",
+                  "FolderURL": null,
+                  "Type": "PowerBIReport",
+                  "Hidden": false
+                },
+                {
+                  "Id": "6099be1c-7081-48e3-a8d2-f7b6c53bc38c",
+                  "Name": "Finance Dashboard - Infusion",
+                  "Path": "/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard - Infusion",
+                  "ParentFolderId": "1747e58e-7c61-4b40-a71f-c3b823c6b0fc",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard - Infusion?&rs:embed=true",
+                  "FolderURL": null,
+                  "Type": "PowerBIReport",
+                  "Hidden": false
+                },
+                {
+                  "Id": "f3e922bd-7268-4f7e-a011-d4ec64eb335c",
+                  "Name": "Finance Dashboard - MedOnc",
+                  "Path": "/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard - MedOnc",
+                  "ParentFolderId": "1747e58e-7c61-4b40-a71f-c3b823c6b0fc",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard - MedOnc?&rs:embed=true",
+                  "FolderURL": null,
+                  "Type": "PowerBIReport",
+                  "Hidden": false
+                },
+                {
+                  "Id": "9608c1ac-bca8-4e1d-aee1-dff5f0a3f962",
+                  "Name": "Finance Dashboard - RadOnc",
+                  "Path": "/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard - RadOnc",
+                  "ParentFolderId": "1747e58e-7c61-4b40-a71f-c3b823c6b0fc",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Level 2/Finance Dashboard - RadOnc?&rs:embed=true",
+                  "FolderURL": null,
+                  "Type": "PowerBIReport",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": [
+            {
+              "Id": "36e2f9dc-69a5-4450-92b7-cfc0ca464fa7",
+              "Name": "Oncology Aria",
+              "Path": "/Dashboards/Oncology and Women's Services/Oncology Aria",
+              "ParentFolderId": "770fd4ad-4096-46b6-81b2-50c8fffdf463",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Oncology Aria?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "c4950852-acf7-4dc3-8c14-07f40c71ee53",
+              "Name": "Oncology Consults Dashboard",
+              "Path": "/Dashboards/Oncology and Women's Services/Oncology Consults Dashboard",
+              "ParentFolderId": "770fd4ad-4096-46b6-81b2-50c8fffdf463",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Oncology Consults Dashboard?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "7da54103-8716-4dbd-b659-8f5bb2f93d27",
+              "Name": "Oncology Patient Experience",
+              "Path": "/Dashboards/Oncology and Women's Services/Oncology Patient Experience",
+              "ParentFolderId": "770fd4ad-4096-46b6-81b2-50c8fffdf463",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women's Services/Oncology Patient Experience?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "c1970ee3-56d9-488b-bf43-5f0f3f8d7d67",
+          "Name": "Patient Experience",
+          "Path": "/Dashboards/Patient Experience",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Patient Experience?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "9e540ca2-f489-4368-86de-a3b6a76ed137",
+              "Name": "Customer Call Experience",
+              "Path": "/Dashboards/Patient Experience/Customer Call Experience",
+              "ParentFolderId": "c1970ee3-56d9-488b-bf43-5f0f3f8d7d67",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Patient Experience/Customer Call Experience?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "308401c6-fbe8-4897-8095-f5a8e7475e38",
+          "Name": "Quality",
+          "Path": "/Dashboards/Quality",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Quality?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "b64ba25f-b6bc-4a83-ae44-d73cbdcd472c",
+              "Name": "Blood Glucose Recorded Date",
+              "Path": "/Dashboards/Quality/Blood Glucose Recorded Date",
+              "ParentFolderId": "308401c6-fbe8-4897-8095-f5a8e7475e38",
+              "Description": "This report is intended to monitor and trend potential patient harm events related to hospital inpatient severe hyper or hypoglycemia events.  ",
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Quality/Blood Glucose Recorded Date?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "47004d9b-f3d1-4122-a273-3d2e1ea960c5",
+              "Name": "Referral Dashboard",
+              "Path": "/Dashboards/Quality/Referral Dashboard",
+              "ParentFolderId": "308401c6-fbe8-4897-8095-f5a8e7475e38",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Quality/Referral Dashboard?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "350a4a24-bcc2-4d25-bc43-15774762458d",
+          "Name": "Z_Ortho",
+          "Path": "/Dashboards/Z_Ortho",
+          "ParentFolderId": "11ff7003-e8d6-473f-a834-2d3cec041da1",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//Dashboards/Z_Ortho?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [],
+          "Reports": [
+            {
+              "Id": "dbc442be-f986-4d1d-8309-5baef40f6c0f",
+              "Name": "Ortho Volume YTD",
+              "Path": "/Dashboards/Z_Ortho/Ortho Volume YTD",
+              "ParentFolderId": "350a4a24-bcc2-4d25-bc43-15774762458d",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/Dashboards/Z_Ortho/Ortho Volume YTD?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        }
+      ],
+      "Reports": []
+    }
+  ],
+  "Reports": []
+}

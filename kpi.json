@@ -1,0 +1,491 @@
+{
+  "Id": null,
+  "Name": null,
+  "Path": "/Folders?$filter=Path%20eq%20%27%2FKPIs%27",
+  "ParentFolderId": null,
+  "Description": null,
+  "URL": null,
+  "FolderURL": null,
+  "Type": null,
+  "Hidden": false,
+  "SubFolders": [
+    {
+      "Id": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+      "Name": "KPIs",
+      "Path": "/KPIs",
+      "ParentFolderId": "6e0dbda3-3cfe-43bf-9629-db4a1619f01f",
+      "Description": "At a Glance",
+      "URL": "https://ashoktest.com/Reports//KPIs?&rs:embed=true",
+      "FolderURL": null,
+      "Type": "Folder",
+      "Hidden": false,
+      "SubFolders": [
+        {
+          "Id": "a21094c5-d093-46c9-808a-fc1814b0f0ff",
+          "Name": "ED",
+          "Path": "/KPIs/ED",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "Department",
+          "URL": "https://ashoktest.com/Reports//KPIs/ED?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "4baefbdb-96b3-4627-a49c-358fc6acc2bd",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/ED/Coming Soon",
+              "ParentFolderId": "a21094c5-d093-46c9-808a-fc1814b0f0ff",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/ED/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "8425ef08-f43d-4966-8f25-6fadd9dddf2b",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/ED/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "4baefbdb-96b3-4627-a49c-358fc6acc2bd",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/ED/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        },
+        {
+          "Id": "a24c37b3-3e67-4055-835e-fb26296b837c",
+          "Name": "Executive",
+          "Path": "/KPIs/Executive",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//KPIs/Executive?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "9ca177ff-719a-44e9-8ca4-088b4dcaccad",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/Executive/Coming Soon",
+              "ParentFolderId": "a24c37b3-3e67-4055-835e-fb26296b837c",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Executive/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "fe5eb3b8-69e3-49cd-902d-6870162f0ca1",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/Executive/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "9ca177ff-719a-44e9-8ca4-088b4dcaccad",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/Executive/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        },
+        {
+          "Id": "89b6bea9-319c-49a0-99db-e0629b09cd27",
+          "Name": "HVI",
+          "Path": "/KPIs/HVI",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "Department",
+          "URL": "https://ashoktest.com/Reports//KPIs/HVI?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "581c65f8-3697-49e7-9b81-ca06efcc10d8",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/HVI/Coming Soon",
+              "ParentFolderId": "89b6bea9-319c-49a0-99db-e0629b09cd27",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/HVI/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "8dd3b74c-7d7f-4f13-a3c2-da3051460004",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/HVI/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "581c65f8-3697-49e7-9b81-ca06efcc10d8",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/HVI/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        },
+        {
+          "Id": "97a25fa2-4016-4971-9b73-7fab75a9689e",
+          "Name": "Lab",
+          "Path": "/KPIs/Lab",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//KPIs/Lab?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "2489b96c-f129-4eef-b839-7aa027862dc1",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/Lab/Coming Soon",
+              "ParentFolderId": "97a25fa2-4016-4971-9b73-7fab75a9689e",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Lab/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "9ebe9739-a554-4af9-a257-7e89cb30b026",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/Lab/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "2489b96c-f129-4eef-b839-7aa027862dc1",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/Lab/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        },
+        {
+          "Id": "2f919651-d060-4286-9128-afe647950799",
+          "Name": "Nursing",
+          "Path": "/KPIs/Nursing",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "Department",
+          "URL": "https://ashoktest.com/Reports//KPIs/Nursing?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "923a3731-d752-4159-bd55-1a5f723bfa15",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/Nursing/Coming Soon",
+              "ParentFolderId": "2f919651-d060-4286-9128-afe647950799",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Nursing/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "b5e71b09-7192-4d5e-a9a1-6caa75766c8e",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/Nursing/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "923a3731-d752-4159-bd55-1a5f723bfa15",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/Nursing/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        },
+        {
+          "Id": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+          "Name": "Oncology and Women's Services",
+          "Path": "/KPIs/Oncology and Women's Services",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "Department",
+          "URL": "https://ashoktest.com/Reports//KPIs/Oncology and Women's Services?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "b003f6ab-c496-4164-990f-3c961034e609",
+              "Name": "Finance",
+              "Path": "/KPIs/Oncology and Women's Services/Finance",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Oncology and Women's Services/Finance?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "c30e1d1d-2592-44fa-aaff-5ace867b3839",
+                  "Name": "Oncology_Finance6",
+                  "Path": "/KPIs/Oncology and Women's Services/Finance/Oncology_Finance6",
+                  "ParentFolderId": "b003f6ab-c496-4164-990f-3c961034e609",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Finance/Oncology_Finance6?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "PowerBIReport",
+                  "Hidden": false
+                }
+              ]
+            },
+            {
+              "Id": "31e36075-3d15-468f-8d8a-845d03cc6076",
+              "Name": "Operations",
+              "Path": "/KPIs/Oncology and Women's Services/Operations",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Oncology and Women's Services/Operations?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "2bae0fbc-7af4-46b5-932c-9fa79619f0b5",
+                  "Name": "Oncology_Operations",
+                  "Path": "/KPIs/Oncology and Women's Services/Operations/Oncology_Operations",
+                  "ParentFolderId": "31e36075-3d15-468f-8d8a-845d03cc6076",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Operations/Oncology_Operations?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "PowerBIReport",
+                  "Hidden": false
+                }
+              ]
+            },
+            {
+              "Id": "c1e09192-db00-4756-ba85-027e3cd82018",
+              "Name": "Quality",
+              "Path": "/KPIs/Oncology and Women's Services/Quality",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Oncology and Women's Services/Quality?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "ce72209a-bdb7-4d13-819b-dfd45f01acd0",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/Oncology and Women's Services/Quality/Coming Soon 2",
+                  "ParentFolderId": "c1e09192-db00-4756-ba85-027e3cd82018",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/Oncology and Women's Services/Quality/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": [
+            {
+              "Id": "b5410639-9f11-4249-af04-7170a0822282",
+              "Name": "Oncology_Consults",
+              "Path": "/KPIs/Oncology and Women's Services/Oncology_Consults",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Oncology_Consults?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "1ac96d9e-2c0c-488b-949b-8972173a8f43",
+              "Name": "Oncology_Finance",
+              "Path": "/KPIs/Oncology and Women's Services/Oncology_Finance",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Oncology_Finance?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "4a211cc0-05cc-4ebe-91fc-679060f6dec3",
+              "Name": "Oncology_PatientCount",
+              "Path": "/KPIs/Oncology and Women's Services/Oncology_PatientCount",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Oncology_PatientCount?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "27933fc8-0855-44ee-bf03-383af9392ae2",
+              "Name": "Oncology_RVU",
+              "Path": "/KPIs/Oncology and Women's Services/Oncology_RVU",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Oncology_RVU?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            },
+            {
+              "Id": "cc184681-66e1-4135-85b6-83b931159e6d",
+              "Name": "Oncology_Visit",
+              "Path": "/KPIs/Oncology and Women's Services/Oncology_Visit",
+              "ParentFolderId": "1ffda99a-93c1-4d3e-a572-9b1054bfb73f",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women's Services/Oncology_Visit?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+              "FolderURL": null,
+              "Type": "PowerBIReport",
+              "Hidden": false
+            }
+          ]
+        },
+        {
+          "Id": "cd6692f6-e6f9-4be5-bc67-91f5fc5cf5f7",
+          "Name": "Quality",
+          "Path": "/KPIs/Quality",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//KPIs/Quality?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "b85bd86f-eadc-4b2c-8f19-e9d5996087e2",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/Quality/Coming Soon",
+              "ParentFolderId": "cd6692f6-e6f9-4be5-bc67-91f5fc5cf5f7",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/Quality/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "f451a06b-4750-4a45-99ae-93a952bab376",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/Quality/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "b85bd86f-eadc-4b2c-8f19-e9d5996087e2",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/Quality/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        },
+        {
+          "Id": "7b521e7f-7eb9-43b3-9855-a1f8fd60ef02",
+          "Name": "SEP Quality",
+          "Path": "/KPIs/SEP Quality",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports//KPIs/SEP Quality?&rs:embed=true",
+          "FolderURL": null,
+          "Type": "Folder",
+          "Hidden": false,
+          "SubFolders": [
+            {
+              "Id": "02ff13e7-27fb-4012-82eb-d95f2e0b776e",
+              "Name": "Coming Soon",
+              "Path": "/KPIs/SEP Quality/Coming Soon",
+              "ParentFolderId": "7b521e7f-7eb9-43b3-9855-a1f8fd60ef02",
+              "Description": null,
+              "URL": "https://ashoktest.com/Reports//KPIs/SEP Quality/Coming Soon?&rs:embed=true",
+              "FolderURL": null,
+              "Type": "Folder",
+              "Hidden": false,
+              "SubFolders": [],
+              "Reports": [
+                {
+                  "Id": "2ca5eb77-b4c0-4159-ba15-3eebf0ad9d49",
+                  "Name": "Coming Soon 2",
+                  "Path": "/KPIs/SEP Quality/Coming Soon/Coming Soon 2",
+                  "ParentFolderId": "02ff13e7-27fb-4012-82eb-d95f2e0b776e",
+                  "Description": null,
+                  "URL": "https://ashoktest.com/Reports/report/KPIs/SEP Quality/Coming Soon/Coming Soon 2?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+                  "FolderURL": null,
+                  "Type": "Report",
+                  "Hidden": false
+                }
+              ]
+            }
+          ],
+          "Reports": []
+        }
+      ],
+      "Reports": [
+        {
+          "Id": "4acdbfd3-5416-41bf-923f-53e392dd48a0",
+          "Name": "Coming_Soon_Report",
+          "Path": "/KPIs/Coming_Soon_Report",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "Main Page (Report)",
+          "URL": "https://ashoktest.com/Reports/report/KPIs/Coming_Soon_Report?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+          "FolderURL": null,
+          "Type": "Report",
+          "Hidden": false
+        },
+        {
+          "Id": "0417945f-b371-466b-903d-4f6ed752133b",
+          "Name": "Coming Soon ",
+          "Path": "/KPIs/Coming Soon",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "Main page",
+          "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Coming Soon?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+          "FolderURL": null,
+          "Type": "PowerBIReport",
+          "Hidden": false
+        },
+        {
+          "Id": "2b1dfa5e-9641-4055-9e1d-3eb1682845d5",
+          "Name": "Coming Soon Updated",
+          "Path": "/KPIs/Coming Soon Updated",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": null,
+          "URL": "https://ashoktest.com/Reports/powerbi/KPIs/Coming Soon Updated?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+          "FolderURL": null,
+          "Type": "PowerBIReport",
+          "Hidden": false
+        },
+        {
+          "Id": "1e3d6b3c-d19d-4b75-8ba5-3c894627ce1f",
+          "Name": "DynamicReport",
+          "Path": "/KPIs/DynamicReport",
+          "ParentFolderId": "c5e4578b-73d8-4b02-bb38-3a556032b681",
+          "Description": "PowerBIReport",
+          "URL": "https://ashoktest.com/Reports/powerbi/KPIs/DynamicReport?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true",
+          "FolderURL": null,
+          "Type": "PowerBIReport",
+          "Hidden": true
+        }
+      ]
+    }
+  ],
+  "Reports": []
+}
