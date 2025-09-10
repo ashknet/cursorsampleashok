@@ -20,6 +20,9 @@
       <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0 0 18c4.97 0 9-4.03 9-9 0-3.53-2.05-6.58-5.02-8.04A7 7 0 0 1 12 20a7 7 0 0 1 0-14z"/></svg>
       </button>
+      <button id="load-local-btn" class="icon-btn" title="Load local JSON" aria-label="Load local JSON">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 20h14a1 1 0 0 0 1-1v-6h-2v5H6v-5H4v6a1 1 0 0 0 1 1zm7-16l5 5h-3v4h-4v-4H7l5-5z"/></svg>
+      </button>
     </div>
   </header>
 
@@ -74,6 +77,24 @@
       </div>
     </section>
   </main>
+
+  <div id="local-overlay" class="overlay hidden" aria-hidden="true">
+    <div class="modal">
+      <h3>Load JSON locally</h3>
+      <p>Open this page directly from your file system by selecting the JSON files:</p>
+      <ul>
+        <li><code>kpi.json</code></li>
+        <li><code>dashboard.json</code></li>
+        <li><code>report.json</code></li>
+      </ul>
+      <div id="drop-zone" class="drop-zone">
+        <input id="file-input" type="file" accept="application/json,.json" multiple />
+        <span>Drag & drop here or click to choose files</span>
+      </div>
+      <div id="load-status" class="muted" style="margin-top:8px"></div>
+      <button id="close-overlay" class="text-btn" style="margin-top:10px">Close</button>
+    </div>
+  </div>
 
   <template id="tmpl-folder-card">
     <div class="card card-folder">

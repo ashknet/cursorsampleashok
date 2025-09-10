@@ -146,3 +146,10 @@ body {
   .content { order: 1; }
   .viewer iframe { height: 62vh; }
 }
+
+/* Overlay for local JSON load */
+.overlay { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(0,0,0,.5); z-index: 50; }
+.modal { width: min(720px, 92vw); background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: var(--shadow); }
+.drop-zone { position: relative; border: 2px dashed var(--border); border-radius: 12px; padding: 24px; display: grid; place-items: center; color: var(--muted); cursor: pointer; }
+.drop-zone.drag { border-color: var(--brand); color: var(--brand); background: rgba(91,140,255,.06); }
+.drop-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
