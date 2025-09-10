@@ -291,6 +291,8 @@
       appState.raw.dashboards = payload.dashboards;
       appState.raw.reports = payload.reports;
       setSection('kpis');
+      // In case files were chosen before boot finished
+      if (window.__ih_local_cache) delete window.__ih_local_cache;
     };
   }
 
@@ -320,11 +322,20 @@ function enableLocalLoader() {
     if (missing.length) { status.text('Missing: ' + missing.join(', ')); return; }
     status.text('Loading…');
     Promise.all([readFileAsJson(kFile), readFileAsJson(dFile), readFileAsJson(rFile)]).then(([k,d,r]) => {
-      if (window.IHub && typeof window.IHub.loadLocal === 'function') {
-        window.IHub.loadLocal({ kpis: k, dashboards: d, reports: r });
-        status.text('Loaded ✓');
-        toggleOverlay(false);
-      }
+      // Immediately hide overlay for better UX
+      status.text('Loaded ✓');
+      toggleOverlay(false);
+      const payload = { kpis: k, dashboards: d, reports: r };
+      // Try to hydrate now; if app API not ready yet, cache and retry shortly
+      const tryHydrate = () => {
+        if (window.IHub && typeof window.IHub.loadLocal === 'function') {
+          window.IHub.loadLocal(payload);
+        } else {
+          window.__ih_local_cache = payload;
+          setTimeout(tryHydrate, 100);
+        }
+      };
+      tryHydrate();
     }).catch(err => {
       console.error(err);
       status.text('Failed to read files. Ensure valid JSON.');
