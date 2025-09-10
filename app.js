@@ -3,11 +3,38 @@
   'use strict';
 
   // ---------- Data loading ----------
-  const DATA_SOURCES = {
-    kpis: './kpi.json',
-    dashboards: './dashboard.json',
-    reports: './report.json'
-  };
+  // Embedded sample data to avoid external file references
+  const SAMPLE = (function () {
+    const kpis = { SubFolders: [{ Name: 'KPIs', SubFolders: [
+      { Name: 'Executive', Reports: [{ Name: 'Coming Soon', URL: 'https://example.com' }] },
+      { Name: 'Oncology and Women\'s Services', Reports: [
+        { Name: 'Oncology_Finance', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_Finance?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' },
+        { Name: 'Oncology_PatientCount', URL: 'https://ashoktest.com/Reports/powerbi/KPIs/Oncology and Women\'s Services/Oncology_PatientCount?rc:toolbar=false&rs:embed=true&rc:showbackbutton=true' }
+      ] }
+    ] }] };
+
+    const dashboards = { SubFolders: [{ Name: 'Dashboards', SubFolders: [
+      { Name: 'Finance', Reports: [
+        { Name: 'SEP Daily Flash Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEP Daily Flash Dashboard?&rs:embed=true' },
+        { Name: 'SEH Daily Flash Dashboard', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Finance/SEH Daily Flash Dashboard?&rs:embed=true' }
+      ] },
+      { Name: 'Oncology and Women\'s Services', Reports: [
+        { Name: 'Oncology Aria', URL: 'https://ashoktest.com/Reports/powerbi/Dashboards/Oncology and Women\'s Services/Oncology Aria?&rs:embed=true' }
+      ] }
+    ] }] };
+
+    const reports = { SubFolders: [{ Name: 'Reports', SubFolders: [
+      { Name: 'ADT', Reports: [
+        { Name: 'All Non-SEH Transfers', URL: 'https://ashoktest.com/Reports/report/Reports/ADT/All Non-SEH Transfers?&rs:embed=true' },
+        { Name: 'OB Coverages', URL: 'https://ashoktest.com/Reports/report/Reports/ADT/OB Coverages?&rs:embed=true' }
+      ] },
+      { Name: 'Appointments', Reports: [
+        { Name: 'Appt Stats', URL: 'https://ashoktest.com/Reports/report/Reports/Appointments/Appt Stats?&rs:embed=true' }
+      ] }
+    ] }] };
+
+    return { kpis, dashboards, reports };
+  })();
 
   const appState = {
     section: 'kpis',
@@ -17,8 +44,8 @@
   };
 
   function fetchJson(key) {
-    // Try normal fetch first; file:// may block due to CORS, handled by local loader
-    return $.getJSON(DATA_SOURCES[key]);
+    // Use embedded data
+    return $.Deferred().resolve(SAMPLE[key]).promise();
   }
 
   function resolveTopFolder(json) {
@@ -267,14 +294,10 @@
 
     // Load all JSON sources in parallel; on failure show local overlay to pick files
     $.when(fetchJson('kpis'), fetchJson('dashboards'), fetchJson('reports')).done((k, d, r) => {
-      appState.raw.kpis = k[0];
-      appState.raw.dashboards = d[0];
-      appState.raw.reports = r[0];
+      appState.raw.kpis = k;
+      appState.raw.dashboards = d;
+      appState.raw.reports = r;
       setSection('kpis');
-    }).fail(() => {
-      enableLocalLoader();
-      toggleOverlay(true);
-      $('#context-info').text('Open local JSON via the upload button to start.');
     });
 
     // Dashboard back
@@ -284,103 +307,11 @@
     });
 
     // Expose a small API for local loading
-    window.IHub = window.IHub || {};
-    window.IHub.loadLocal = function (payload) {
-      if (!payload) return;
-      appState.raw.kpis = payload.kpis;
-      appState.raw.dashboards = payload.dashboards;
-      appState.raw.reports = payload.reports;
-      setSection('kpis');
-      // In case files were chosen before boot finished
-      if (window.__ih_local_cache) delete window.__ih_local_cache;
-    };
+    // Local loader no longer needed since data is embedded
   }
 
   $(boot);
 })();
 
-// -------- Local JSON Loader (supports file://) --------
-function enableLocalLoader() {
-  const overlay = $('#local-overlay');
-  const drop = $('#drop-zone');
-  const input = $('#file-input');
-  const status = $('#load-status');
-
-  $('#load-local-btn').on('click', () => toggleOverlay(true));
-  $('#close-overlay').on('click', () => toggleOverlay(false));
-
-  function handleFiles(files) {
-    const list = Array.from(files);
-    const pick = (kw) => list.find(f => f.name.toLowerCase().includes(kw));
-    const kFile = pick('kpi');
-    const dFile = pick('dashboard');
-    const rFile = pick('report');
-    const missing = [];
-    if (!kFile) missing.push('kpi.json');
-    if (!dFile) missing.push('dashboard.json');
-    if (!rFile) missing.push('report.json');
-    if (missing.length) { status.text('Missing: ' + missing.join(', ')); return; }
-    status.text('Loading…');
-    Promise.all([readFileAsJson(kFile), readFileAsJson(dFile), readFileAsJson(rFile)]).then(([k,d,r]) => {
-      // Immediately hide overlay for better UX
-      status.text('Loaded ✓');
-      toggleOverlay(false);
-      const payload = { kpis: k, dashboards: d, reports: r };
-      // Try to hydrate now; if app API not ready yet, cache and retry shortly
-      const tryHydrate = () => {
-        if (window.IHub && typeof window.IHub.loadLocal === 'function') {
-          window.IHub.loadLocal(payload);
-        } else {
-          window.__ih_local_cache = payload;
-          setTimeout(tryHydrate, 100);
-        }
-      };
-      tryHydrate();
-    }).catch(err => {
-      console.error(err);
-      status.text('Failed to read files. Ensure valid JSON.');
-    });
-  }
-
-  drop.on('dragover', (e) => { e.preventDefault(); drop.addClass('drag'); });
-  drop.on('dragleave', () => drop.removeClass('drag'));
-  drop.on('drop', (e) => { e.preventDefault(); drop.removeClass('drag'); handleFiles(e.originalEvent.dataTransfer.files); });
-  input.on('change', (e) => handleFiles(e.target.files));
-}
-
-function readFileAsJson(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = () => reject(reader.error);
-    reader.onload = () => {
-      try { resolve(JSON.parse(reader.result)); }
-      catch (e) { reject(e); }
-    };
-    reader.readAsText(file);
-  });
-}
-
-function toggleOverlay(show) {
-  const overlay = $('#local-overlay');
-  overlay.toggleClass('hidden', !show).attr('aria-hidden', show ? 'false' : 'true');
-}
-
-// When local JSONs are loaded, hydrate the app
-window.addEventListener('ihub:local-ready', function () {
-  const store = window.__ihub_local;
-  if (!store) return;
-  const $ = window.jQuery;
-  // Inject data into app state and render
-  if ($ && $.isReady) {
-    // Small shim: re-use existing boot flow by setting globals
-    const state = window.__ih_state || {};
-  }
-  // Directly render by invoking the same functions via a minimal bridge
-  (function bridge() {
-    const app = $('#section-title');
-    if (!app.length) return;
-    // Replace data on the running app
-    const ctx = window.__ih_ctx || {};
-  })();
-});
+// Local loader code removed; using embedded SAMPLE data
 

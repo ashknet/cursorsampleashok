@@ -1,33 +1,23 @@
 :root {
-  --bg: #0b0e14;
-  --bg-elev: #0f1320;
-  --panel: #121826;
-  --surface: #161d2f;
-  --text: #e6eaf2;
-  --muted: #9aa3b2;
-  --brand: #5b8cff;
-  --brand-2: #7a5cff;
-  --accent: #34d399;
-  --danger: #ef4444;
-  --border: #1f2a44;
+  /* Brand palette per request */
+  --brand: #4d8c2d;
+  --brand-2: #a64270;
+  --accent: #6ba3d4;
+  --ink: #535e69;
+  --ink-deep: #1a354a;
+
+  /* Derived UI tokens */
+  --bg: #0e1419;
+  --bg-elev: #101820;
+  --panel: #111c25;
+  --surface: #12202b;
+  --text: #e8eef5;
+  --muted: #a0acb8;
+  --border: rgba(26,53,74,.35);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
-/* Light theme */
-body.light {
-  --bg: #f6f8fb;
-  --bg-elev: #ffffff;
-  --panel: #ffffff;
-  --surface: #ffffff;
-  --text: #0b1220;
-  --muted: #4b5567;
-  --brand: #375dfb;
-  --brand-2: #6f46ff;
-  --accent: #0ea5e9;
-  --danger: #ef4444;
-  --border: #e6e9f2;
-  --shadow: 0 20px 40px rgba(19, 41, 82, .12);
-}
+/* Optional light theme removed to adhere to fixed palette */
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
